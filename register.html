@@ -38,15 +38,7 @@ pass1.setCustomValidity("请输入8～16位密码");}
 	border-radius:20px 20px 20px 20px;
 }
 .age {
-	
 	text-align:left;
-}
-.div {
-	width: 100%;
-    margin: 0 auto;
-	
-	height: 100px
-	background-color:red;
 }
 a:link {
 	color: orange;
@@ -81,15 +73,14 @@ hr {
 </style>
 </head>
 <body>
- <div class="div">
  <div class="div1">
 <header>
   <h1>注册列表</h1>
 </header>
-<hr width="100%" color="gray" size="1">
+<hr width="99.7%" color="gray" size="1">
 </div>
 <div class="div2">
-<form id = "test" method = "get" oninput = "output.value=parseInt(age.value)" onsubmit="return Check ()">
+<form id = "test" method = "get" oninput = "output.value=parseInt(age.value)">
 <table align="center" cellspacing="15" >
 <tr>
 <td><label for = "name">用&nbsp; 户&nbsp; 名:</label></td><td><input id = "name" required autofocus size="35"></td>
@@ -116,14 +107,13 @@ hr {
 <td><label for = "jianjie">个人简介:</label></td><td><textarea id="jianjie" rows="5" cols="35"></textarea></td>
 </tr>
 <tr>
-<td colspan="3" align="center"><input type = "submit" value ="提交" class="button">&nbsp;&nbsp;&nbsp;&nbsp;<input type = "reset" value = "重置" class="button"></td>
+<td colspan="3" align="center"><input type = "submit" value ="提交" class="button" onclick="Check();">&nbsp;&nbsp;&nbsp;&nbsp;<input type = "reset" value = "重置" class="button"></td>
 </tr>
 </table>
 </form><br/>
 <footer>
-  <a href = "http://www.17173.com" target="block">版权信息</a> &nbsp;|&nbsp;<a href = "#">联系方式</a>
+  <a href = "#" target="block">版权信息</a> &nbsp;|&nbsp;<a href = "#">联系方式</a>
 </footer><br/><br/>
-</div>
 </div>
 </body>
 </html>
