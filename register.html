@@ -19,16 +19,22 @@ pass1.setCustomValidity("请输入8～16位密码");}
 }
 </script>
 <style type="text/css">
+
+.div {
+	box-shadow: #666 7px 7px 15px;
+	margin: 0 auto;
+	width: 600px;
+}
 .div1 {
 	background-color: #C0E1FF;
-	width: 40%;
+	width: 100%;
 	margin: 0 auto;
 	height: 55px;
 	border-radius:5px 5px;
 }
 .div2 {
 	background-color: #B8DDFF;
-	width: 40%;
+	width: 100%;
 	margin: 0 auto;
 	border-radius:0px 0px 5px 5px;
 }
@@ -68,11 +74,16 @@ h1 {
 	color:gray;
 }
 hr {
-  margin: -23px 0px
+  margin: -23px 0px;
+}
+table {
+	border-spacing:15px;
+	margin: auto;			
 }
 </style>
 </head>
 <body>
+<div class="div">
  <div class="div1">
 <header>
   <h1>注册列表</h1>
@@ -81,12 +92,12 @@ hr {
 </div>
 <div class="div2">
 <form id = "test" method = "get" oninput = "output.value=parseInt(age.value)">
-<table align="center" cellspacing="15" >
+<table>
 <tr>
 <td><label for = "name">用&nbsp; 户&nbsp; 名:</label></td><td><input id = "name" required autofocus size="35"></td>
 </tr>
 <tr>
-<td><label for = "password1">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 码:</label></td><td><input id = "password1" type = "password" required size="35"></td><td><small>&nbsp; 请输入8～16位密码 </small></td>
+<td><label for = "password1">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 码:</label></td><td><input id = "password1" type = "password" required size="35" placeholder = "请输入8～16位密码"></td><td><div id="checkbox"><input type="checkbox" name="checkbox" class="checkbox" id="pass"><label class="label" for="pass"></label></div></td>
 </tr>
 <tr>
 <td><label for = "password2">确认密码:</label></td><td><input id = "password2" type = "password" required placeholder = "请再次输入密码" size="35"></td>
@@ -107,13 +118,14 @@ hr {
 <td><label for = "jianjie">个人简介:</label></td><td><textarea id="jianjie" rows="5" cols="35"></textarea></td>
 </tr>
 <tr>
-<td colspan="3" align="center"><input type = "submit" value ="提交" class="button" onclick="Check();">&nbsp;&nbsp;&nbsp;&nbsp;<input type = "reset" value = "重置" class="button"></td>
+<td colspan="3"><input type = "submit" value ="提交" class="button" onclick="Check();">&nbsp;&nbsp;&nbsp;&nbsp;<input type = "reset" value = "重置" class="button"></td>
 </tr>
 </table>
 </form><br/>
 <footer>
   <a href = "#" target="block">版权信息</a> &nbsp;|&nbsp;<a href = "#">联系方式</a>
 </footer><br/><br/>
+</div>
 </div>
 </body>
 </html>

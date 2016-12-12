@@ -2,22 +2,42 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<script>
+		function myFunction() {
+			var change = document.getElementById("change");
+			var password = document.getElementById("mima");
+			if (password.value == "") {
+				change.value = "显示密码";
+			}
+			else if (change.value == "显示密码") {
+				change.value ="隐藏密码";
+				password.type = "text";
+			}
+			else if (change.value=="隐藏密码") {
+				change.value ="显示密码";
+				password.type = "password";
+			}
+		}
+	</script>
 	<style type="text/css">
-		input
+		.class1
 		{
-     
-          background-color: gray;
+          background-color: #F08080;
           border: none;
-          padding: none;
-          outline: medium;
+          outline: none;
+		}
+		.class2,.class3
+		{
+          background-color:transparent;
+          outline: none;
 		}
 		body
 		{
-			background-color: green;
+			background-color: #FFF8DC;
 		}
 		td
 		{
-			height: 30px
+			height: 30px;
 		}
 	</style>
 </head>
@@ -36,22 +56,25 @@
  		<center>用户登录</center>
  	</caption>
  	<tr>
- 		<td bgcolor="gray" align="left">
+ 		<td bgcolor="#F08080">
  		 <font color="white">username:</font>
- 			<input type="text" name="yonghumin">
+ 			<input type="text" name="yonghumin" class="class1" >
  		</td>
  	</tr>
  	<tr>
- 		<td bgcolor="gray" align="left">
+ 		<td bgcolor="#F08080">
  			<font color="white">psaaword:</font>
- 				<input type="password" name="mima">
+ 				<input type="password" name="mima" class="class1" id="mima">
  		</td>
+ 		<td><input type="button" class="class3" id="change" value="显示密码" onclick="myFunction()"></td>
  	</tr>
   <tr>
-  	<td>
-  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  		<input align="center" type="submit" name="tijiao" value="提交" style="background-color:transparent;color:white">
-  	</td>
+  	<td align="center">
+  		<input type="submit" name="tijiao" class="class2" onclick="window.open('http://www.baidu.com')"/>&nbsp;&nbsp;&nbsp;
+        <input type = "button" name = "register" value = "注册" class="class2" onclick = "window.open('./register.html')"/>
+    </td>	
+  </tr>
+  <tr>
   </tr>
  </table>
  </form>
